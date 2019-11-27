@@ -1,0 +1,95 @@
+﻿<Window x:Class="ManyFoodZ.EditPositions" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Title="EditPositions"
+        Height="280" Width="600" WindowStartupLocation="CenterOwner" AllowsTransparency="True" WindowStyle="None" Loaded="Window_Loaded_1" MouseLeftButtonDown="Window_MouseLeftButtonDown_1"
+        ResizeMode="NoResize" Background="{x:Null}">
+    <Border BorderBrush="Black" Background="White" BorderThickness="1" CornerRadius="0,20,0,20">
+        <Grid>
+            <StackPanel Name="WindowControlStackPanel" Margin="0,8,5,0" VerticalAlignment="Top" HorizontalAlignment="Right" Orientation="Horizontal">
+                <Button Content="Confirm" Name="ConfirmButton" Height="25" Width="75" Padding="0" Background="{x:Null}" BorderBrush="{x:Null}" FontSize="14" FontWeight="Bold" IsTabStop="False"
+                        Click="ConfirmButton_Click">
+                    <Button.ToolTip>
+                        <TextBlock>Save and Close</TextBlock>
+                    </Button.ToolTip>
+                </Button>
+                <Button Content="Cancel" Name="CloseButton" Height="25" Width="75" Padding="0" Background="{x:Null}" BorderBrush="{x:Null}" FontSize="14" FontWeight="Bold" IsTabStop="False"
+                        RenderTransformOrigin="0.5,0.5" Click="CloseButton_Click">
+                    <Button.ToolTip>
+                        <TextBlock>Close without Saving</TextBlock>
+                    </Button.ToolTip>
+                </Button>
+            </StackPanel>
+            <Grid Margin="5,38,5,7">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.7*" />
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="0.7*" />
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="0.7*" />
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="0.7*" />
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1.5*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="0" Grid.Column="0" Content="Position 1" VerticalAlignment="Center" Padding="0" Margin="5,0"/>
+                <Label Grid.Row="0" Grid.Column="1" Content="Position 2" VerticalAlignment="Center" Padding="0" Margin="5,0" />
+                <Label Grid.Row="0" Grid.Column="2" Content="Position 3" VerticalAlignment="Center" Padding="0" Margin="5,0" />
+                <Label Grid.Row="0" Grid.Column="3" Content="Position 4" VerticalAlignment="Center" Padding="0" Margin="5,0" />
+                <Label Grid.Row="1" Grid.Column="4" Content="Brush Position" VerticalAlignment="Center" Padding="0" Margin="5,0" />
+                <Label Grid.Row="1" Grid.Column="5" Content="Food Position" VerticalAlignment="Center" Padding="0" Margin="5,0" />
+                <TextBox Name="pos1NameTextBox" Grid.Row="1" Grid.Column="0" Text="Position 1" VerticalAlignment="Center" Margin="2"/>
+                <TextBox Name="pos2NameTextBox" Grid.Row="1" Grid.Column="1" Text="Position 2" VerticalAlignment="Center" Margin="2" />
+                <TextBox Name="pos3NameTextBox" Grid.Row="1" Grid.Column="2" Text="Position 3" VerticalAlignment="Center" Margin="2" />
+                <TextBox Name="pos4NameTextBox" Grid.Row="1" Grid.Column="3" Text="Position 4" VerticalAlignment="Center" Margin="2" />
+                <Label Grid.Row="2" Grid.Column="0" Content="X" VerticalAlignment="Center" Padding="0" Margin="5,0"/>
+                <Label Grid.Row="2" Grid.Column="1" Content="X" VerticalAlignment="Center" Padding="0" Margin="5,0" />
+                <Label Grid.Row="2" Grid.Column="2" Content="X" VerticalAlignment="Center" Padding="0" Margin="5,0" />
+                <Label Grid.Row="2" Grid.Column="3" Content="X" VerticalAlignment="Center" Padding="0" Margin="5,0" />
+                <Label Grid.Row="2" Grid.Column="4" Content="X" VerticalAlignment="Center" Padding="0" Margin="5,0" />
+                <Label Grid.Row="2" Grid.Column="5" Content="X" VerticalAlignment="Center" Padding="0" Margin="5,0" />
+                <TextBox Name="pos1xTextBox" Grid.Row="3" Grid.Column="0" Text="0" VerticalAlignment="Center" Margin="2" />
+                <TextBox Name="pos2xTextBox" Grid.Row="3" Grid.Column="1" Text="0" VerticalAlignment="Center" Margin="2" />
+                <TextBox Name="pos3xTextBox" Grid.Row="3" Grid.Column="2" Text="0" VerticalAlignment="Center" Margin="2" />
+                <TextBox Name="pos4xTextBox" Grid.Row="3" Grid.Column="3" Text="0" VerticalAlignment="Center" Margin="2" />
+                <TextBox Name="pos5xTextBox" Grid.Row="3" Grid.Column="4" Text="0" VerticalAlignment="Center" Margin="2" />
+                <TextBox Name="posFxTextBox" Grid.Row="3" Grid.Column="5" Text="0" VerticalAlignment="Center" Margin="2" />
+                <Label Grid.Row="4" Grid.Column="0" Content="Y" VerticalAlignment="Center" Padding="0" Margin="5,0" />
+                <Label Grid.Row="4" Grid.Column="1" Content="Y" VerticalAlignment="Center" Padding="0" Margin="5,0" />
+                <Label Grid.Row="4" Grid.Column="2" Content="Y" VerticalAlignment="Center" Padding="0" Margin="5,0" />
+                <Label Grid.Row="4" Grid.Column="3" Content="Y" VerticalAlignment="Center" Padding="0" Margin="5,0" />
+                <Label Grid.Row="4" Grid.Column="4" Content="Y" VerticalAlignment="Center" Padding="0" Margin="5,0" />
+                <Label Grid.Row="4" Grid.Column="5" Content="Y" VerticalAlignment="Center" Padding="0" Margin="5,0" />
+                <TextBox Name="pos1yTextBox" Grid.Row="5" Grid.Column="0" Text="0" VerticalAlignment="Center" Margin="2" />
+                <TextBox Name="pos2yTextBox" Grid.Row="5" Grid.Column="1" Text="0" VerticalAlignment="Center" Margin="2" />
+                <TextBox Name="pos3yTextBox" Grid.Row="5" Grid.Column="2" Text="0" VerticalAlignment="Center" Margin="2" />
+                <TextBox Name="pos4yTextBox" Grid.Row="5" Grid.Column="3" Text="0" VerticalAlignment="Center" Margin="2" />
+                <TextBox Name="pos5yTextBox" Grid.Row="5" Grid.Column="4" Text="0" VerticalAlignment="Center" Margin="2" />
+                <TextBox Name="posFyTextBox" Grid.Row="5" Grid.Column="5" Text="0" VerticalAlignment="Center" Margin="2" />
+                <Label Grid.Row="6" Grid.Column="0" Content="Z" VerticalAlignment="Center" Padding="0" Margin="5,0" />
+                <Label Grid.Row="6" Grid.Column="1" Content="Z" VerticalAlignment="Center" Padding="0" Margin="5,0" />
+                <Label Grid.Row="6" Grid.Column="2" Content="Z" VerticalAlignment="Center" Padding="0" Margin="5,0" />
+                <Label Grid.Row="6" Grid.Column="3" Content="Z" VerticalAlignment="Center" Padding="0" Margin="5,0" />
+                <Label Grid.Row="6" Grid.Column="4" Content="Z" VerticalAlignment="Center" Padding="0" Margin="5,0" />
+                <Label Grid.Row="6" Grid.Column="5" Content="Z" VerticalAlignment="Center" Padding="0" Margin="5,0" />
+                <TextBox Name="pos1zTextBox" Grid.Row="7" Grid.Column="0" Text="0" VerticalAlignment="Center" Margin="2" />
+                <TextBox Name="pos2zTextBox" Grid.Row="7" Grid.Column="1" Text="0" VerticalAlignment="Center" Margin="2" />
+                <TextBox Name="pos3zTextBox" Grid.Row="7" Grid.Column="2" Text="0" VerticalAlignment="Center" Margin="2" />
+                <TextBox Name="pos4zTextBox" Grid.Row="7" Grid.Column="3" Text="0" VerticalAlignment="Center" Margin="2" />
+                <TextBox Name="pos5zTextBox" Grid.Row="7" Grid.Column="4" Text="0" VerticalAlignment="Center" Margin="2" />
+                <TextBox Name="posFzTextBox" Grid.Row="7" Grid.Column="5" Text="0" VerticalAlignment="Center" Margin="2" />
+                <Button Name="useCurrentAPButton1" Grid.Row="8" Grid.Column="0" Content="Current Pos." Tag="0" Margin="3" Height="23" Click="useCurrentAPButton1_Click" />
+                <Button Name="useCurrentAPButton2" Grid.Row="8" Grid.Column="1" Content="Current Pos." Tag="1" Margin="3" Height="23" Click="useCurrentAPButton1_Click" />
+                <Button Name="useCurrentAPButton3" Grid.Row="8" Grid.Column="2" Content="Current Pos." Tag="2" Margin="3" Height="23" Click="useCurrentAPButton1_Click" />
+                <Button Name="useCurrentAPButton4" Grid.Row="8" Grid.Column="3" Content="Current Pos." Tag="3" Margin="3" Height="23" Click="useCurrentAPButton1_Click" />
+                <Button Name="useCurrentAPButton5" Grid.Row="8" Grid.Column="4" Content="Current Pos." Tag="4" Margin="3" Height="23" Click="useCurrentAPButton1_Click" />
+                <Button Name="useCurrentAPButton6" Grid.Row="8" Grid.Column="5" Content="Current Pos." Tag="5" Margin="3" Height="23" Click="useCurrentAPButton1_Click" />
+            </Grid>
+        </Grid>
+    </Border>
+</Window>

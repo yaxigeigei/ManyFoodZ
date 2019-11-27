@@ -1,0 +1,30 @@
+﻿<Window x:Class="ManyFoodZ.Camera"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:cam="clr-namespace:WebcamControl;assembly=WebcamControl" WindowStartupLocation="CenterOwner" Title="Camera" Height="500" Width="700" Closing="Window_Closing">
+    <Grid>
+        <Grid Name="cameraGrid" Margin="5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10*" />
+                <RowDefinition Height="1*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="2*" />
+            </Grid.ColumnDefinitions>
+            <cam:Webcam Name="WebCamCtrl" Grid.ColumnSpan="7" />
+            <Button Name="camStartButton" Content="Preview" Grid.Row="1" Grid.Column="0" Click="camStartButton_Click" />
+            <Button Name="camStopButton" Content="Turn Off" Grid.Row="1" Grid.Column="1" Click="camStopButton_Click" />
+            <Button Name="camRecordButton" Content="Film" Grid.Row="1" Grid.Column="2" Click="RecordButton_Click" />
+            <Button Name="endRecButton" Content="Cut" Grid.Row="1" Grid.Column="3" Click="StopRecordButton_Click" />
+            <Button Name="camSnapButton" Content="Snap" Grid.Row="1" Grid.Column="4" Click="SnapshotButton_Click" />
+            <ComboBox Name="camVideoComboBox" SelectedValue="{Binding VideoDevice, Mode=OneWayToSource}" Grid.Row="1" Grid.Column="5" VerticalContentAlignment="Center"/>
+            <ComboBox Name="camAudioComboBox" SelectedValue="{Binding AudioDevice, Mode=OneWayToSource}" Grid.Row="1" Grid.Column="6" VerticalContentAlignment="Center"/>
+        </Grid>
+    </Grid>
+</Window>

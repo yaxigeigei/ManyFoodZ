@@ -1,0 +1,33 @@
+        case 'o':
+          if(incomingVal == 1)
+            newCmd.linear2Angular = true;
+          else
+            newCmd.linear2Angular = false;
+          Serial.print("Movements are first linear and then angular: ");
+          Serial.println(newCmd.linear2Angular); break;
+
+
+
+
+
+
+      else if(incomingCmd.equals("FSL"))
+      {
+        forwardLength = incomingVal;
+        Serial.print("Food loader forward length set to ");
+        Serial.print(incomingVal);
+        Serial.println(" um");
+      }
+      else if(incomingCmd.equals("WLD"))
+      {
+        wheelDiameter = incomingVal;
+        Serial.print("Food loader's wheel diameter set to ");
+        Serial.print(incomingVal);
+        Serial.println(" um");
+      }
+
+
+
+
+
+  loaderStepNum = forwardLength / pi / wheelDiameter * m;
